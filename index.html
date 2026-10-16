@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ShopEasy</h1>
+        <p>Your Online Shopping Store</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Login</a>
+        <a href="user.html">Shop</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+
+    <main class="auth-container">
+        <section class="auth-box">
+            <h2>Welcome to ShopEasy</h2>
+            <p class="muted">Shop your favourite products online.</p>
+
+            <div class="tabs">
+                <button type="button" id="loginTab">Login</button>
+                <button type="button" id="signupTab">Sign Up</button>
+            </div>
+
+            <form id="loginForm">
+                <h3>Login to Your Account</h3>
+                <input type="email" id="loginEmail"
+                       placeholder="Email Address" required>
+                <input type="password" id="loginPassword"
+                       placeholder="Password" required>
+                <button type="submit" class="full-button">Login</button>
+            </form>
+
+            <form id="signupForm" hidden>
+                <h3>Create an Account</h3>
+                <input type="text" id="signupName"
+                       placeholder="Full Name" required>
+                <input type="email" id="signupEmail"
+                       placeholder="Email Address" required>
+                <input type="password" id="signupPassword"
+                       placeholder="Create Password"
+                       minlength="4" required>
+                <button type="submit" class="full-button">Sign Up</button>
+            </form>
+
+            <p id="authMessage" class="message" role="status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

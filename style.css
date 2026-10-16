@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #222;
+    min-height: 100vh;
+}
+
+.header {
+    background: #1769aa;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.navbar {
+    background: #124d7b;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #0d4778;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 9px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #8dc5f2;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+    min-height: 65vh;
+}
+
+.auth-box {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0002;
+}
+
+.auth-box h2 {
+    color: #1769aa;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auth-box h3 {
+    margin: 18px 0 10px;
+}
+
+.muted {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tabs button {
+    flex: 1;
+}
+
+.full-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 15px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.page-title {
+    text-align: center;
+    margin: 28px 10px 10px;
+    color: #1769aa;
+}
+
+.page-description {
+    text-align: center;
+    margin: 10px 15px 20px;
+    color: #666;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    padding: 25px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.product {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0002;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 19px;
+}
+
+.price {
+    color: #1769aa;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.product button {
+    width: 100%;
+    margin-top: auto;
+}
+
+.cart-box,
+.admin-box {
+    background: white;
+    max-width: 850px;
+    width: calc(100% - 30px);
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.cart-box h2,
+.admin-box h2 {
+    margin-bottom: 18px;
+}
+
+.cart-item,
+.admin-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    flex: 1;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity button {
+    padding: 6px 10px;
+}
+
+.danger {
+    background: #c0392b;
+}
+
+.danger:hover {
+    background: #922b21;
+}
+
+.total {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.admin-product img {
+    width: 75px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.admin-product .details {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.admin-product .details p {
+    margin-top: 6px;
+}
+
+.admin-box form {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 950px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .product img {
+        height: 230px;
+    }
+
+    .auth-box,
+    .cart-box,
+    .admin-box {
+        padding: 18px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .admin-product {
+        flex-wrap: wrap;
+    }
+}

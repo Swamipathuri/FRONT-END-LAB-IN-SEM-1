@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ShopEasy</h1>
+        <p>Find Your Favourite Products</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Login</a>
+        <a href="user.html">Home</a>
+        <a href="#products">Products</a>
+        <a href="#cart">Cart (<span id="cartCount">0</span>)</a>
+        <a href="admin.html">Admin</a>
+        <a href="index.html" id="logoutLink">Logout</a>
+    </nav>
+
+    <main>
+        <h2 class="page-title">Our Products</h2>
+        <p class="page-description">
+            Discover great products at affordable prices.
+        </p>
+
+        <section class="products" id="products"></section>
+
+        <section class="cart-box" id="cart">
+            <h2>My Shopping Cart</h2>
+            <div id="cartItems">Your cart is empty.</div>
+            <h3 class="total" id="total">Total: ₹0</h3>
+
+            <button id="checkoutButton">Checkout</button>
+            <button class="danger" id="clearCartButton">Clear Cart</button>
+            <p id="cartMessage" class="message" role="status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("checkoutButton")
+            .addEventListener("click", checkout);
+
+        document.getElementById("clearCartButton")
+            .addEventListener("click", clearCart);
+
+        document.getElementById("logoutLink")
+            .addEventListener("click", logout);
+    </script>
+</body>
+</html>
